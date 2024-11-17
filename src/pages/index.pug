@@ -1,0 +1,29 @@
+extends common/layout.pug
+
+block meta
+    title Mobile checkpoint
+    meta(name='description', content='')
+
+block head
+    link(rel='stylesheet', href='css/index-style.min.css')
+
+
+block content
+
+    include blocks/index/hero/hero.pug
+    include blocks/index/functional/functional.pug
+    include blocks/index/mobility-checkpoint/mobility-checkpoint.pug
+    include blocks/index/call-action/call-action.pug
+    include blocks/index/features/features.pug
+    include blocks/index/wallpaper/wallpaper.pug
+    include blocks/index/reviews/reviews.pug
+    include blocks/index/price/price.pug
+
+
+    include blocks/common/section-counter/section-counter.pug
+    include blocks/common/modal/modal.pug
+
+block page-bottom
+    script(src='js/bundle.js')
+    script(src='js/script-index.js')
+

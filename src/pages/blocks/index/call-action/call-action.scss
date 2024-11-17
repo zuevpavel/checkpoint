@@ -1,0 +1,22 @@
+.call-action {
+    margin-bottom: 100px;
+    background: $white;
+    @include media-up--M {
+        margin-bottom: 200px;
+    }
+}
+
+.call-action__title {
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    @include media-up--XS {
+        font-size: 45px;
+        font-weight: 300;
+    }
+    @include media-up--M {
+        margin-bottom: 40px;
+        font-size: 67px;
+    }
+}

@@ -1,0 +1,145 @@
+.footer {
+
+
+    &__inner {
+        background: $black;
+        max-width: 2000px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 40px 15px 15px;
+        @include media-up--S {
+            padding: 50px 40px 10px;
+        }
+    }
+
+    &__row {
+        display: grid;
+        gap: 20px;
+        @include media-up--S {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__head-wrap {
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        max-width: 350px;
+        color: #B6B6B6;
+        display: none;
+        @include media-up--M {
+            display: block;
+        }
+    }
+
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        @include media-up--L {
+            display: block;
+        }
+    }
+
+    &__nav {
+        color: $white;
+        .menu__list {
+            justify-content: space-between;
+        }
+    }
+
+    &__social {
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+        @include media-up--S {
+            margin: 0 0 30px;
+
+        }
+    }
+
+    &__social-title {
+        color: #B6B6B6;
+        margin-right: 15px;
+    }
+
+    &__adress {
+        margin-bottom: 30px;
+    }
+
+    &__adress-title {
+        font-weight: 600;
+        color: $white;
+        margin-bottom: 10px;
+        @include media-up--S {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__adress-subtitle {
+        display: inline-flex;
+        flex-direction: column;
+        color: #B6B6B6;
+        a {
+            transition: color .3s;
+            color: inherit;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 17px;
+        color: rgba($text-light-color, 0.4);
+    }
+
+    &__content {
+        display: grid;
+        gap: 35px;
+        justify-items: flex-end;
+
+    }
+
+    &__list {
+        display: grid;
+        gap: 10px;
+        @include media-up--S {
+            gap: 30px;
+            grid-auto-flow: column;
+            justify-items: flex-end;
+        }
+    }
+
+    &__list-item {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    &__list-link:hover {
+        color: $menu-link--hover;
+    }
+
+    &__list-title {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__bottom {
+        font-size: 14px;
+        line-height: 17px;
+        gap: 25px;
+        color: #B6B6B6;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+
+}

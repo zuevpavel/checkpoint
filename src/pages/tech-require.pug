@@ -1,0 +1,65 @@
+extends common/layout.pug
+
+block meta
+    title Mobile checkpoint
+    meta(name='description', content='')
+
+block head
+    link(rel='stylesheet', href='css/index-style.min.css')
+
+
+block content
+
+    section.tech-require
+        .box
+            h1.tech-require__title Технические требования
+            .tech-require__info
+                .tech-require__info-title Что нужно для системы.
+                .tech-require__info-descr После покупки- вы получаете систему, мы разворачиваем систему на ВАШЕМ сервере (на время тестирования система находится на нашем сервере), настраиваем вам сервер при необходимости, оказываем техническую поддержку и сопровождение в течении года.
+                ul.tech-require__list
+                    li.tech-require__item Пункт 1
+                    li.tech-require__item Пункт 2
+                    li.tech-require__item Пункт 3
+                    li.tech-require__item Пункт 4
+            .tech-require__table-title Таблица:
+            .tech-require__table
+                table.tech-require__table-inner(cellpadding="10")
+                    tbody
+                        tr
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                        tr
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                        tr
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                        tr
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                        tr
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                        tr
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+                            td Аккаунт разработчика
+
+
+
+    include blocks/common/modal/modal.pug
+
+block page-bottom
+    script(src='js/bundle.js')
+    script(src='js/script-tech.js')

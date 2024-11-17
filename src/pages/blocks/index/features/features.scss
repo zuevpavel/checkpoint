@@ -1,0 +1,95 @@
+.features {
+    position: relative;
+    background: $white;
+    margin-bottom: 100px;
+}
+
+.features__info-title {
+    font-weight: 500;
+    font-size: 27px;
+    @include media-up--S {
+        font-size: 42px;
+    }
+}
+
+.features__inner {
+    display: grid;
+    @include media-up--S {
+        grid-template-columns: 1fr 1fr;
+    }
+    gap: 30px;
+}
+
+.features__info {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    order: 2;
+    @include media-up--S {
+        order: unset;
+        padding-top: 300px;
+        padding-bottom: 100px;
+    }
+}
+
+.features__info-item {
+    padding: 20px 0;
+}
+
+.features__info-subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.features__info-descr {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.features__pictures {
+    order: 1;
+    align-self: flex-start;
+    @include media-up--S {
+        order: unset;
+        position: sticky;
+        top: 10px;
+    }
+}
+
+.features__pictures-inner {
+    position: relative;
+    min-height: 500px;
+}
+
+.picture--phone {
+    margin: 0 auto;
+    display: block;
+}
+
+.picture--card-blue,
+.picture--card-green,
+.picture--card-red {
+    max-width: 60%;
+    @include media-up--M {
+        max-width: 100%;
+    }
+}
+
+.picture--card-blue {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.picture--card-green {
+    position: absolute;
+    top: 35%;
+    left: 0;
+
+}
+
+.picture--card-red {
+    position: absolute;
+    top: 70%;
+    right: 5%;
+}

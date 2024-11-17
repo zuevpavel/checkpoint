@@ -1,0 +1,41 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background 0.3s, border 0.3s, color 0.3s;
+    @include media-up--S {
+        padding: 20px 30px;
+    }
+    &--white {
+        color: $black;
+        background-color: $white;
+        border: 1px solid transparent;
+        border-radius: 2px;
+
+        &:hover {
+            color: $white;
+            border-color: $white;
+            background-color: $black;
+        }
+    }
+
+    &--black {
+        color: $white;
+        background-color: $black;
+        border: 1px solid $white;
+        border-radius: 2px;
+
+        &:hover {
+            color: $black;
+            border-color: $black;
+            background-color: $white;
+        }
+    }
+}

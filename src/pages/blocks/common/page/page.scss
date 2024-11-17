@@ -1,0 +1,464 @@
+.page {
+  box-sizing: border-box;
+  min-width: 320px;
+  height: 100%;
+
+  &__body {
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: scroll;
+  }
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
+  flex-direction: column;  // и прижимаем footer в IE 10-11
+  min-height: 100%;
+  margin: 0;
+  word-break: break-word;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-align: left;
+  color: $text-color;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[tabindex='-1']:focus {
+  outline: none !important; // stylelint-disable-line
+}
+
+// Коррекция для кликабельных элементов с указанной ролью в iOS
+[role='button'] {
+  cursor: pointer;
+}
+
+// Мы любим Сафари (на самом деле, нет).
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none; // stylelint-disable-line
+}
+
+// area,
+// summary,
+a,
+button,
+[role='button'],
+input,
+label,
+select,
+textarea {
+  touch-action: manipulation; // Стилевая коррекция 300ms задержки (для поддерживающих браузеров)
+  margin: 0;                  // Убираем margin в Firefox и Safari
+}
+
+button,
+input {
+  overflow: visible;    // Покажем торчащее в Edge
+  text-transform: none; // Уберём наследование text transform в Firefox
+}
+
+// Коррекция проблем стилизации для Safari
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; // stylelint-disable-line
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+button {
+    padding: 0;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    font-family: inherit;
+}
+
+// Коррекция для Mobile Safari (https://github.com/twbs/bootstrap/issues/11266)
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
+  -webkit-appearance: listbox; // stylelint-disable-line
+}
+
+textarea {
+  overflow: auto;   // Удаление верт. скролла в IE.
+  resize: vertical; // Правильное изменение размеров
+}
+
+svg {
+  fill: currentColor;
+  vertical-align: middle;
+
+  a &,
+  button & {
+    pointer-events: none; // Мы любим Edge, это браузер! (почти)
+  }
+
+  &:not(:root) {
+    overflow: hidden; // Скрыть выступающее за границы в IE
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    transition: color 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: $font-family;
+  font-weight: 700;
+  line-height: 1.2;
+  color: currentColor;
+}
+
+h1 { font-size: $font-size-h1; } // stylelint-disable-line
+h2 { font-size: $font-size-h2; } // stylelint-disable-line
+h3 { font-size: $font-size-h3; } // stylelint-disable-line
+h4 { font-size: $font-size-h4; } // stylelint-disable-line
+h5 { font-size: $font-size-h5; } // stylelint-disable-line
+h6 { font-size: $font-size-h6; } // stylelint-disable-line
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+pre,
+address,
+figure {
+  margin-top: 0;
+}
+
+p {
+    margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+  line-height: inherit;
+}
+
+
+small {
+  font-size: $font-size-sm;
+}
+
+sub,
+sup {
+  font-size: $font-size-sm;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+blockquote {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+code {
+  padding: 0.06em 0.3em;
+  color: $text-color;
+  background-color: rgba(#000, 0.08);
+  border-radius: 10px;
+}
+
+pre {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  tab-size: 2;
+  background-color: rgba(#000, 0.08);
+
+  code {
+    background: transparent;
+  }
+}
+
+body {
+    background: $white;
+}
+.page-main {
+    flex: 1 1;
+    background: $white;
+}
+
+.box {
+    max-width: 1065px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include media-up--S {
+        padding: 0 20px;
+    }
+}
+
+.big-box {
+    max-width: 2000px;
+    margin: 0 auto;
+    width: 100%;
+    // padding: 0 40px;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 35px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    @include media-up--S {
+        font-size: 16px;
+        line-height: 35px;
+    }
+}
+
+.title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+
+    @include media-up--S {
+        font-size: 42px;
+        line-height: 45px;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 10;
+    }
+}
+
+.text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+.highlight-text {
+    color: #38C6DD;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.h1 {
+    margin: 30px 0 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+
+    @include media-up--S {
+        margin-top: 35px;
+        margin-bottom: 15px;
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
+
+.h2 {
+    margin: 20px 0 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include media-up--S {
+        font-size: 18px;
+        line-height: 27px;
+    }
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-muted {
+    font-weight: 400;
+    color: rgba($text-primary-color, 0.5);
+}
+
+.color-red {
+    color: $red;
+}
+
+.color-green {
+    color: $green;
+}
+
+.color-yellow {
+    color: $yellow;
+}
+
+.show-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+    cursor: pointer;
+    fill: #9599A9;
+}
+
+// Custom scrollbar
+.custom-scroll {
+    overflow: auto;
+}
+
+.custom-scroll,
+.dashboard,
+.bv_ul_inner,
+.tooltip__text {
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        background-color: rgba($custom-scroll-bg, 1);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: rgba($custom-scroll-bg, 1);
+        border-radius: 999px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($custom-scroll, 1);
+        border-radius: 999px;
+    }
+}
+
+.theme {
+    transition: color 0.3s, background 0.3s;
+    background-color: rgba($bg-primary-color, 1);
+    color: rgba($text-primary-color, 1);
+}
+
+.theme > * {
+    transition: color 0.3s, background 0.3s;
+}
+
+.dashboard {
+    background-color: rgba($bg-primary-color, 1);
+    color: rgba($text-primary-color, 1);
+
+    .page-main {
+        padding: 50px 10px 20px;
+
+        @include media-up--S {
+            padding: 60px 20px 20px;
+        }
+    }
+}
+
+.hover-link-icon {
+    position: relative;
+    padding-right: 15px;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: $menu-link--hover;
+        right: 7px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+        transform: rotate(45deg);
+        transition: opacity .3s;
+    }
+    &:hover:after {
+        content: '';
+        opacity: .8;
+        animation: 1s linear 0s infinite alternate boxShad;
+    }
+}
+
+@keyframes boxShad { from { box-shadow: 0px 0px 0px 0px #7697BC; } to { box-shadow: 0px 0px 0px 2px #7697BC; }  }
+
+.logo {
+    font-family: 'Noto Sans',sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.content {
+    background: $white;
+}

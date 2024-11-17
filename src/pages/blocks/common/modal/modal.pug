@@ -1,0 +1,17 @@
+.modal(id="modal-1")
+    .modal__overlay.modal-exit
+    .modal__content
+        .modal__close-btn.modal-exit
+        .modal__title Оставьте контактные данные и мы свяжемся с вами с течении дня.
+        .modal__form
+            form.form(method="post")
+                .form__group.modal__form-group
+                    input.form__input.modal__form-input(type="text", id="name-1", placeholder="Ваше имя" autocomplete="username" required)
+
+                .form__group.modal__form-group
+                    input.form__input.modal__form-input.input--tel(type="text", id="tel-1", placeholder="Ваш телефон" autocomplete="on" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required)
+
+                    p.modal__disclaimer
+                        |Оставляя свои персональные данные вы соглашаетесь с <a class="form__link" href="#!">политикой конфиденциальности </a> и обработкой <a class="form__link" href="#!"> персональных данных. </a>
+
+                button.btn.btn--black(type="submit") Отправить

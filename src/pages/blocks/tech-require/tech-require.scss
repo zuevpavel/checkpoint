@@ -1,0 +1,51 @@
+.tech-require {
+    padding-top: 160px;
+}
+
+.tech-require__info {
+    margin-bottom: 50px;
+}
+
+.tech-require__title {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1.5;
+}
+
+.tech-require__info-title {
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.tech-require__info-descr {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.tech-require__list {
+    margin-left: 30px;
+    list-style: unset;
+}
+
+.tech-require__table-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.tech-require__table {
+    margin-bottom: 100px;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.tech-require__table-inner {
+    border-collapse: collapse;
+    td {
+        width: 300px;
+        min-width: 300px;
+        border: 1px solid #C4C4C4;
+    }
+}

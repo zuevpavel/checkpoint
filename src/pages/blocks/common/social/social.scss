@@ -1,0 +1,32 @@
+.social {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link-wrap {
+        background: radial-gradient(117.61% 117.61% at 50% 50%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__link-wrap:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+
+        &:hover {
+            .social__icon {
+                fill: $green;
+            }
+        }
+    }
+
+    &__icon {
+        fill: $white;
+        transition: fill 0.3s;
+    }
+}

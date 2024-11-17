@@ -1,0 +1,111 @@
+.functional {
+    max-width: 2000px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(85, 85, 85, 0.5) 0.01%, rgba(219, 36, 36, 0.5) 28.2%, rgba(49, 123, 255, 0.5) 63.88%, rgba(44, 44, 44, 0.5) 106.38%), #2C2C2C;
+    overflow: hidden;
+}
+.functional__box {
+    position: relative;
+}
+.functional__inner {
+    flex-direction: column;
+    display: flex;
+    @include media-up--M {
+        flex-direction: unset;
+    }
+
+}
+.functional__info {
+    position: relative;
+    background: $black;
+    order: 2;
+    padding: 30px 0 100px;
+    z-index: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 300%;
+        left: -10%;
+        top: 0;
+        bottom: 0;
+        background: $black;
+        transform: translateX(0);
+        z-index: -1;
+    }
+    @include media-up--M {
+        width: 60%;
+        padding: 180px 0;
+        &::after {
+            content: '';
+            left: 0;
+            transform: translateX(-100%);
+        }
+    }
+}
+.functional__info-inner {
+    max-width: 550px;
+}
+.functional__info-subtitle {
+    font-size: 10px;
+    line-height: 2.4;
+    text-transform: uppercase;
+    color: #B6B6B6;
+
+}
+.functional__info-title {
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1;
+    color: $white;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    @include media-up--XS {
+        font-size: 35px;
+    }
+    @include media-up--S {
+        font-size: 42px;
+    }
+}
+.functional__info-descr {
+    max-width: 470px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $white;
+    p + p {
+        margin-top: 20px;
+    }
+}
+.functional__visual {
+    overflow: hidden;
+    order: 1;
+    padding-top: 25px;
+    @include media-up--M {
+        padding: 0;
+        // width: 40%;
+        width: 56%;
+        position: absolute;
+        top: 0;
+        left: 60%;
+        bottom: 0;
+    }
+}
+
+.functional__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    @include media-up--M {
+        position: absolute;
+    }
+}
+
+.second, .third, .fourth {
+    @include media-up--S {
+        transform: translateX(-105%);
+    }
+}

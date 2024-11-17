@@ -1,0 +1,27 @@
+//Common
+@import "utils/variables.scss";
+@import "utils/fonts.scss";
+@import "utils/swiper-bundle";
+@import "../pages/blocks/common/page/page.scss";
+@import "../pages/blocks/common/header/header.scss";
+@import "../pages/blocks/common/footer/footer.scss";
+@import "../pages/blocks/common/menu/menu.scss";
+@import "../pages/blocks/common/form/form.scss";
+@import "../pages/blocks/common/btn/btn.scss";
+@import "../pages/blocks/common/logo/logo.scss";
+@import "../pages/blocks/common/modal/modal.scss";
+@import "../pages/blocks/common/social/social.scss";
+@import "../pages/blocks/common/section-counter/section-counter.scss";
+
+//Index
+@import "../pages/blocks/index/hero/hero.scss";
+@import "../pages/blocks/index/functional/functional.scss";
+@import "../pages/blocks/index/mobility-checkpoint/mobility-checkpoint.scss";
+@import "../pages/blocks/index/call-action/call-action.scss";
+@import "../pages/blocks/index/features/features.scss";
+@import "../pages/blocks/index/wallpaper/wallpaper.scss";
+@import "../pages/blocks/index/reviews/reviews.scss";
+@import "../pages/blocks/index/price/price.scss";
+
+//tech-require
+@import "../pages/blocks/tech-require/tech-require.scss";
